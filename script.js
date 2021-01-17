@@ -7,9 +7,12 @@ var mainHeader = document.getElementById("mainHeader");
 var startBtn = document.getElementById("startBtn");
 var finalScoreDisplay = document.getElementById("finalScoreDisplay");
 var finalScoreHeader = document.getElementById("finalScoreHeader");
-var highscorePage = document.getElementById("highscorePage");
+var highScorePage = document.getElementById("highScorePage");
+var highScoreList = document.getElementById("highScoreList");
 var userInput = document.getElementById("userInput");
 var submitInitials = document.getElementById("submitInitials");
+var goBack = document.getElementById("goBack");
+var clearHighScores =document.getElementById("clearHighScores");
 
 var timer = 60;
 var index = 0;
@@ -110,13 +113,6 @@ function answerQuestion() {
 
 // show quiz results
 function displayResults() {
-  //create tag for showing score
-  //var scoreMsgEL = $("<h1>");
-  // adds text to it
-  //scoreMsgEL.text(`Your final score was ${timer}!`);
-  // add child to the parent tag
-  //displayResults.append(scoreMsgEL);
-
   // show a text box for putting my initials in
   finalScoreDisplay.style.display = "block";
   startBtn.style.display = "none";
@@ -148,13 +144,31 @@ function submitScore() {
   finalScoreDisplay.style.display = "none";
 
   // show the high score page
-  highscorePage.style.display = "block";
+  mainHeader.textContent = "High Scores";
+  highScorePage.style.display = "block";
+  highScoreList.style.display = "block";
   for (let i = 0; i < highscores.length; i++) {
     const element = document.createElement("div");
     element.textContent = highscores[i].user + ": " + highscores[i].score;
-    highscorePage.appendChild(element);
+    highScoreList.appendChild(element);
   }
+  
 }
+//goBack button restarts game
+goBack.addEventListener("click", newGame);
+function newGame(){
+  location.reload();
+}
+
+//clearHighScores button clears high scores from local storage
+clearHighScores.addEventListener("click", clearAllScores);    
+function clearAllScores (){
+ localStorage.clear();
+//remove score display
+highScoreList.style.display = "none";
+
+
+} 
 
 // ```
 // ## Some of the things that I need are...
