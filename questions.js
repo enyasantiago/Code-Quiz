@@ -1,27 +1,27 @@
 var questions = [
 {
-  title: "q1",
-  choices: ["answer1", "answer2", "answer3", "answer4", "answer5"],
-  answer: "answer1",
+  title: " Which built-in method returns the length of the string?",
+  choices: ["length()", "size()", "index()", "None of the above"],
+  answer: "length()",
 },
 {
-  title: "q2",
-  choices: ["answer1", "answer2", "answer3", "answer4", "answer5"],
-  answer: "answer2",
+  title: "Which built-in method returns the string representation of the number's value?",
+  choices: ["toValue()", "toNumber()", "toString()", "None of the above"],
+  answer: "toString()",
 },
 {
-  title: "q3",
-  choices: ["answer1", "answer2", "answer3", "answer4", "answer5"],
-  answer: "answer3",
+  title: "Which of the following function of String object returns a number indicating the Unicode value of the character at the given index?",
+  choices: ["charAt()", "charCodeAt()", "concat()", "indexOf()"],
+  answer: "charCodeAt()",
 },
 {
-  title: "q4",
-  choices: ["answer1", "answer2", "answer3", "answer4", "answer5"],
-  answer: "answer4",
+  title: "Which of the following function of String object returns a number indicating whether a reference string comes before or after or is the same as the given string in sort order?",
+  choices: ["localeCompare()", "search()", "substr()", "concat()"],
+  answer: "localeCompare()",
 },
 {
-  title: "q5",
-  choices: ["answer1", "answer2", "answer3", "answer4", "answer5"],
-  answer: "answer5",
+  title: "Which of the following function of String object returns the calling string value converted to lower case while respecting the current locale?",
+  choices: ["toLocaleLowerCase()", "toLowerCase()", "toString()", "substring()"],
+  answer: "toLocaleLowerCase()",
 },
 ];
